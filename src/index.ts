@@ -29,9 +29,9 @@ function createAdmin(
   }
 }
 
-const user1 = createUser("Jean", "jean", "jean@gmai.com", "1234abcd");
-const user2 = createUser("Daphne", "daphne", "daphne@gamil.com", "1234abcd");
-const user3 = createUser("João", "joão", "joao@gmai.com", "1234abcd");
+const user1 = createUser("Rogerio", "rogerio", "rfs@gmail.com", "1234abcd");
+const user2 = createUser("Luke", "luke", "luke@gamil.com", "1234abcd");
+const user3 = createUser("Alicia", "alicia", "alicia@gmail.com", "1234abcd");
 
 user1.follow(user3);
 user1.follow(user2);
@@ -44,32 +44,37 @@ user3.showFollowers();
 
 const tweet1 = user1.sendTweet("Olá mundo");
 const tweet2 = user1.sendTweet("Olá Growdevers");
-const tweet3 = user1.sendTweet("Growdev é TOP!");
+const tweet3 = user1.sendTweet("Growdev é TOP Master!");
 
 user2.sendTweet("Hello world!");
 user2.sendTweet("Hello Growdevers");
-user2.sendTweet("Growdev is the best!");
+user2.sendTweet("Growdev is very good!");
 
 user3.sendTweet("Hola mundo");
 user3.sendTweet("Hola Growdevers");
-user3.sendTweet("Growdev es la mejor!");
+user3.sendTweet("Growdev is big tech!");
 
-tweet2.like("jean");
-tweet3.like("joão");
-tweet3.like("jean");
-tweet3.like("daphne");
+tweet2.like("rogerio");
+tweet3.like("luke");
+tweet3.like("rogerio");
+tweet3.like("luke");
 
 tweet1.show();
 tweet2.show();
 tweet3.show();
 
-tweet3.reply("Based!", "daphne");
-tweet3.reply("La más pura verdad!", "joão");
-tweet3.reply("Só falo verdades.", "jean");
+tweet3.reply("Putz!", "luke");
+tweet3.reply("La más vá!", "rogerio");
+tweet3.reply("Não digo nada.Só olho é observo", "rogerio");
 
 user3.showFeed();
 
-const admin = createAdmin("Elon", "musk", "musk@growtwitter.com", "1234abcd");
+const admin = createAdmin(
+  "Odin",
+  "hunsun",
+  "hunsun@growtwitter.com",
+  "1234abcd"
+);
 
 admin.show();
 admin.banUser(user2);
